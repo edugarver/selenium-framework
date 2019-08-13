@@ -14,8 +14,8 @@ Feature: scc homework test
     And order id is displayed
 
     Examples:
-      | url                    | productA      | productB          | productC |
-      | http://localhost:3000/ | Cazafantasmas | Transmetropolitan | Gyo      |
+      | url                                                    | productA      | productB          | productC |
+      | https://edugarver-scc-homework-senior-qre.netlify.com/ | Cazafantasmas | Transmetropolitan | Gyo      |
 
 
   Scenario Outline: delete an order
@@ -30,5 +30,5 @@ Feature: scc homework test
     Then the order is not displayed
 
     Examples:
-      | url                    | product |
-      | http://localhost:3000/ | Gyo     |
+      | url                                                    | product |
+      | https://edugarver-scc-homework-senior-qre.netlify.com/ | Gyo     |
