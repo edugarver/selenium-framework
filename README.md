@@ -13,7 +13,7 @@ https://travis-ci.com/edugarver/scc-autoframework
 
 # running locally
 To run the test cases locally, just checkout the project.
-In the BrowserDriver.java class, uncomment the following line:
+In `BrowserDriver.java`, uncomment the following line:
 > `System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");`
 
 And comment the next one:
