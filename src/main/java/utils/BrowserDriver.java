@@ -20,7 +20,6 @@ public class BrowserDriver {
                 System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
                 driver = new ChromeDriver();
                 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-                driver.manage().window().maximize();
             } finally {
                 Runtime.getRuntime().addShutdownHook(new Thread(new BrowserCleanup()));
             }
