@@ -20,6 +20,7 @@ public class TestSteps {
     private OrdersPage ordersPage = new OrdersPage();
     private ProductsPage productsPage = new ProductsPage();
     private OrderSuccessfulPage orderSuccessfulPage = new OrderSuccessfulPage();
+    private OrderDeletedPage orderDeletedPage = new OrderDeletedPage();
     private NavigationBar navigationBar = new NavigationBar();
 
     private static String orderId = "";
@@ -56,7 +57,7 @@ public class TestSteps {
     @Then("^successful order message is displayed$")
     public void successfulOrderMessageIsDisplayed() {
         LOGGER.info("Checking if successful order message is displayed");
-        Assert.assertTrue(orderSuccessfulPage.isSuccessfulMessageOrderDisplayed());
+        Assert.assertTrue(orderSuccessfulPage.isSuccessfulOrderMessageDisplayed());
     }
 
     @Then("^order id is displayed$")
@@ -80,8 +81,7 @@ public class TestSteps {
     }
 
     @Given("^user searches the order id$")
-    public void userSearchesOrderId()
-    {
+    public void userSearchesOrderId() {
         LOGGER.info("Searching in orders by the order id");
         ordersPage.searchOrder(orderId);
     }
@@ -92,10 +92,10 @@ public class TestSteps {
         ordersPage.deleteOrder(orderId);
     }
 
-    @Then("^the order is not displayed$")
-    public void orderIsNotDisplayed() {
-        LOGGER.info("Checking that previous order is not displayed anymore");
-        Assert.assertFalse(ordersPage.isOrderDisplayed(orderId));
+    @Then("^order deleted message is displayed$")
+    public void orderDeletedMessageIsDisplayed() {
+        LOGGER.info("Checking if order deleted is displayed");
+        Assert.assertTrue(orderDeletedPage.isOrderDeletedMessageDisplayed());
     }
 
 }

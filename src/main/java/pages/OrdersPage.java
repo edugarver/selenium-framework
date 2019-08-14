@@ -39,19 +39,4 @@ public class OrdersPage {
         driver.findElement(deleteOrderButtonLocator).click();
     }
 
-    /**
-     * Checks if the order identified by the given id is shown in the site or not
-     * @param orderId
-     * @return
-     */
-    public boolean isOrderDisplayed(String orderId) {
-        By orderLocator = By.cssSelector("div[autoclass='" + orderId + "']");
-        WebElement order = null;
-        try {
-            order = driver.findElement(orderLocator);
-        } catch (NoSuchElementException ignored) {
-        }
-        return order != null;
-    }
-
 }

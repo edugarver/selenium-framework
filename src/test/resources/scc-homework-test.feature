@@ -15,7 +15,7 @@ Feature: scc homework test
 
     Examples:
       | url                                                    | productA      | productB          | productC |
-      | https://edugarver-scc-homework-senior-qre.netlify.com/ | Cazafantasmas | Transmetropolitan | Gyo      |
+      | https://edugarver-scc-homework-senior-qre.netlify.com/ | Salvajes Vengadores | Transmetropolitan | Gyo      |
 
 
   Scenario Outline: delete an order
@@ -25,9 +25,7 @@ Feature: scc homework test
     And user navigates to 'orders'
     And user searches the order id
     And user deletes the order
-    And user navigates to 'orders'
-    When user searches the order id
-    Then the order is not displayed
+    Then order deleted message is displayed
 
     Examples:
       | url                                                    | product |

@@ -30,7 +30,7 @@ public class OrderSuccessfulPage {
      * Checks if the message that states that the order was successful is displayed or not
      * @return
      */
-    public boolean isSuccessfulMessageOrderDisplayed() {
+    public boolean isSuccessfulOrderMessageDisplayed() {
         return orderSuccessfulMessage.isDisplayed();
     }
 
