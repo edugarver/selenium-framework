@@ -1,11 +1,13 @@
 # scc-autoframework
 The framework has been written using the Page Object Model design pattern, with JUnit, Cucumber, Selenium and Java.
 
-# test cases
-The test cases are located in `/test/java/resources`, in the feature file
-
-The test cases can be run as JUnit test cases, or with a maven goal:
-> `mvn clean install`
+# structure of the project
+`/scr/main/java/pages` contains all the classes that model the pages of the application
+`/src/main/java/utils` contains just the BrowserDriver, a class to manage the webdriver instance
+`/src/main/resources` contains the webdriver for chrome (for windows)
+`src/test/java/TestRunner` is the main class that will run the test cases
+`src/test/java/steps` contains TestSteps, which is the class that contains all the method that model the steps written in Cucumber
+`src/test/java/resources` contains the feature file in which the test cases/scenarios are written
 
 # ci/cd
 The framework is deployed in Travis CI after every commit. 
@@ -19,7 +21,8 @@ In `BrowserDriver.java`, uncomment the following line:
 And comment the next one:
 > `System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");`
 
-Do not commit this change.
+The test cases can then be executed as JUnit test cases, or with a maven goal:
+> `mvn clean install`
 
 # report
 If run locally, the test reports are located in `target/cucumber-html-report/index.html`
