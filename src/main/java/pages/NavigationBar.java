@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.BrowserDriver;
 
+/**
+ * Class that models the navigation bar. It just contains three links, for the products (or homepage), orders and the cart
+ */
 public class NavigationBar {
 
     private static WebDriver driver = BrowserDriver.getCurrentDriver();
