@@ -2,7 +2,7 @@
 The framework has been written using the Page Object Model design pattern, with JUnit, Cucumber, Selenium and Java.
 
 # test cases
-The test cases are located in /test/java/resources, in the feature file
+The test cases are located in `/test/java/resources`, in the feature file
 
 The test cases can be run as JUnit test cases, or with a maven goal:
 > `mvn clean install`
@@ -22,5 +22,5 @@ And comment the next one:
 Do not commit this change.
 
 # report
-If run locally, the test reports are located in target/cucumber-html-report/index.html
+If run locally, the test reports are located in `target/cucumber-html-report/index.html`
 If run from Travis, the only reports available are the log files
