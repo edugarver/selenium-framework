@@ -1,4 +1,4 @@
-# scc-autoframework
+# selenium-framework
 The framework has been written using the Page Object Model design pattern, with JUnit, Cucumber, Selenium and Java.
 
 ### structure of the project
