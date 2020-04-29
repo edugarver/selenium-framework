@@ -23,16 +23,12 @@ Scenario Outline: delete an order
     Then order deleted message is displayed
 
     Examples:
-      | url                                                    | product |
-      | https://edugarver-scc-homework-senior-qre.netlify.com/ | Gyo     |
+      | url                                     | product |
+      | https://online-comics-shop.netlify.app/ | Gyo     |
 ```
 
 `'<url>'` and `'<product>'` are parameters, which will be replaced in runtime with the values specified in the Examples section.
 If we wanted to execute the same test multiple times but with different products, we just need to add more lines to the Examples section. The same can be said about the url.
-
-### ci/cd
-The framework is deployed in Travis CI after every commit. 
-https://travis-ci.com/edugarver/scc-autoframework
 
 ### running locally
 To run the test cases locally, just checkout the project.
@@ -47,4 +43,3 @@ The test cases can then be executed as JUnit test cases, or with a maven goal:
 
 ### report
 If run locally, the test reports are located in `target/cucumber-html-report/index.html`
-If run from Travis, the only reports available are the log files

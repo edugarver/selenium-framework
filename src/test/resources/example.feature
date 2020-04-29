@@ -1,4 +1,4 @@
-Feature: scc homework test
+Feature: example test
 
   Scenario Outline: place an order
     Given user navigates to url '<url>'
@@ -14,8 +14,8 @@ Feature: scc homework test
     And order id is displayed
 
     Examples:
-      | url                                                    | productA      | productB          | productC |
-      | https://edugarver-scc-homework-senior-qre.netlify.com/ | Salvajes Vengadores | Transmetropolitan | Gyo      |
+| url                                     | productA            | productB          | productC |
+| https://online-comics-shop.netlify.app/ | Salvajes Vengadores | Transmetropolitan | Gyo      |
 
 
   Scenario Outline: delete an order
@@ -28,5 +28,5 @@ Feature: scc homework test
     Then order deleted message is displayed
 
     Examples:
-      | url                                                    | product |
-      | https://edugarver-scc-homework-senior-qre.netlify.com/ | Gyo     |
+| url                                     | product |
+| https://online-comics-shop.netlify.app/ | Gyo     |
