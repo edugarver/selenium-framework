@@ -31,15 +31,12 @@ Scenario Outline: delete an order
 If we wanted to execute the same test multiple times but with different products, we just need to add more lines to the Examples section. The same can be said about the url.
 
 ### running locally
-To run the test cases locally, just checkout the project.
-In `BrowserDriver.java`, uncomment the following line:
-> `System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");`
-
-And comment the next one:
-> `System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");`
-
+In the class BrowserDriver, on line 20, change the property to select the driver to be used for execution:
+```java
+System.setProperty("webdriver.chrome.driver", "src/main/resources/mac/chromedriver");
+```
 The test cases can then be executed as JUnit test cases, or with a maven goal:
 > `mvn clean install`
 
 ### report
-If run locally, the test reports are located in `target/cucumber-html-report/index.html`
+the test reports are located in `target/cucumber-html-report/index.html`
