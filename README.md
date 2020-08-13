@@ -35,6 +35,7 @@ In the class BrowserDriver, on line 20, change the property to select the driver
 ```java
 System.setProperty("webdriver.chrome.driver", "src/main/resources/mac/chromedriver");
 ```
+Also, make sure that the correct Chrome version is installed on the local machine
 The test cases can then be executed as JUnit test cases, or with a maven goal:
 > `mvn clean install`
 
