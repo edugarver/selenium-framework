@@ -17,8 +17,7 @@ public class BrowserDriver {
   public synchronized static WebDriver getCurrentDriver() {
     if (driver == null) {
       try {
-//                System.setProperty("webdriver.chrome.driver", "src/main/resources/windows/chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/windows/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
       } finally {
