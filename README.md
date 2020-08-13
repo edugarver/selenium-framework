@@ -31,6 +31,7 @@ Scenario Outline: delete an order
 If we wanted to execute the same test multiple times but with different products, we just need to add more lines to the Examples section. The same can be said about the url.
 
 ### running locally
+The class BrowserDriver sets up the driver to run the test cases. By default, the windows version is being used, but it can be changed in this class.
 The test cases can then be executed as JUnit test cases, or with a maven goal:
 > `mvn clean install`
 
